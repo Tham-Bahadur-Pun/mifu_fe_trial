@@ -1,95 +1,56 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import Form from "./Form";
+import Header from "./Header";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="styles.main">
+      <Header />
+      <Box pt="90" pb="20">
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          direction="column"
+          gap={4}
+          mt="20"
+        >
+          <Box textAlign="center" mb="10">
+            <Heading as="h1" size="3xl" fontWeight="bold">
+              Become an Infuencer For
+            </Heading>
+            <Heading as="h1" size="3xl" fontWeight="bold">
+              Breakaway x Mifu
+            </Heading>
+          </Box>
+          <Text
+            align="center"
+            fontWeight="500"
+            fontSize="20"
+            lineHeight="tall"
+            letterSpacing="0.5px"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            Whether you&apos;re the person with the most likes or followers on
+            campus, or a hard-worker <br /> looking to build your network and
+            gain marketing experience, we want to HEAR from you.
+          </Text>
+          <Text
+            align="center"
+            fontWeight="500"
+            fontSize="20"
+            lineHeight="tall"
+            letterSpacing="0.5px"
+          >
+            Becoming a part of the Breakaway Influencer and Ambassador team is
+            pretty simple. Just <br />
+            apply by selecting your preferred market below. Complete your
+            application and attach your <br /> Instagram handle for a chance to
+            be considered!
+          </Text>
+          <Box width="55%" mt="20">
+            <Form />
+          </Box>
+        </Flex>
+      </Box>
     </main>
   );
 }
